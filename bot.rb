@@ -14,8 +14,8 @@ class MagicBot
 	def find_image(text="magic")
 		image = {}
 	
-		page_size = 500
-		page = 1
+		page_size = 100
+		page = rand(23)
 		uri = URI("http://api.dp.la/v2/items/?q=#{text}&api_key=#{DPLibrary.api_key}&sourceResource.type=image&page=#{page}&page_size=#{page_size}")
 		response = Net::HTTP.get(uri)
 		response_hash = JSON.parse(response)
