@@ -28,6 +28,19 @@ class MagicBot
 		image
 	end
 	
+	def post(image)
+		image_path = 'tmp_magic_img.png'
+		File.open(image_path, 'wb') do |fo|
+		  fo.write open(image['url']).read 
+		end
+
+		if image['title'].length < 140
+			@client.update_with_media("#{image['title']}", File.new(image_path))
+		else
+			puts '140, wtf'
+		end		
+	end
+
 	def post_random
 		image = nil
 		loop do
@@ -35,15 +48,7 @@ class MagicBot
 			break if image['title'].length < 140
 		end
 	
-		File.open('tmp_magic_img.png', 'wb') do |fo|
-		  fo.write open(image['url']).read 
-		end
-		
-		if image['title'].length < 140
-			@client.update_with_media("#{image['title']}", File.new("tmp_magic_img.png"))
-		else
-			puts '140, wtf'
-		end		
+		post(image)
 	end
 
 end
