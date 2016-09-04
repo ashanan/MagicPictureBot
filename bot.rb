@@ -52,8 +52,3 @@ class MagicBot
 	end
 
 end
-
-
-bot = MagicBot.new
-
-bot.post_random
