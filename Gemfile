@@ -4,3 +4,4 @@ source "https://rubygems.org"
 
 gem 'DPLibrary'
 gem 'twitter'
+gem 'sinatra'
