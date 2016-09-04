@@ -1,5 +1,5 @@
 require 'DPLibrary'
-require 'Twitter'
+require 'twitter'
 
 DPLibrary.api_key = 'YOUR_DPLA_API_KEY'
 
