@@ -1,5 +1,5 @@
 # MagicPictureBot
-[@MagicPictureBot](https://dp.la/)
+[@MagicPictureBot](https://twitter.com/magicpicturebot)
 
 This is a simple Twitter bot.  It searches the [Digital Public Library of America](https://dp.la/)'s image collection for "magic" and posts a random image every night at midnight (when else would it post?).
 
